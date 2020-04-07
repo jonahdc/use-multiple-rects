@@ -52,11 +52,11 @@ export function useMultipleRects({ ids = [] }: { ids: string[] }) {
     updateRefs();
     updateRects();
 
-    window.addEventListener('resize', updateRefs);
+    window.addEventListener('resize', updateRects);
     window.addEventListener('scroll', updateRects);
 
     return () => {
-      window.removeEventListener('resize', updateRefs);
+      window.removeEventListener('resize', updateRects);
       window.removeEventListener('scroll', updateRects);
     };
   }, [updateRefs, updateRects]);

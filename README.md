@@ -4,20 +4,22 @@ A React hook that retrieves the window position and dimensions of multiple eleme
 
 ## Usage
 
-```
+```javascript
 import { useMultipleRects } from 'use-multiple-rects';
 
-const ids = ['id1', 'id2', 'id3'];
+const example = () => {
+  const ids = ['id1', 'id2', 'id3'];
 
-const [refs, rects] = useMultipleRects(ids);
+  const [refs, rects] = useMultipleRects(ids);
 
-return (
-  <>
-    <div ref={refs['id1']}>Dimensions: {rects['id1']}</div>
-    <div ref={refs['id2']}>Dimensions: {rects['id2']}</div>
-    <div ref={refs['id3']}>Dimensions: {rects['id3']}</div>
-  </>
-)
+  return (
+    <>
+      <div ref={refs['id1']}>Dimensions: {JSON.stringify(rects['id1'])}</div>
+      <div ref={refs['id2']}>Dimensions: {JSON.stringify(rects['id2'])}</div>
+      <div ref={refs['id3']}>Dimensions: {JSON.stringify(rects['id3'])}</div>
+    </>
+  );
+};
 ```
 
 ## License
