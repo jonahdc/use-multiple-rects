@@ -31,9 +31,9 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "usemultiplerects",
+  "name": "use-multiple-rects",
   "author": "Jonah dc",
-  "module": "dist/usemultiplerects.esm.js",
+  "module": "dist/use-multiple-rects.esm.js",
   "devDependencies": {
     "@types/jest": "^25.1.4",
     "@types/react": "^16.9.29",
