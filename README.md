@@ -10,7 +10,7 @@ import { useMultipleRects } from 'use-multiple-rects';
 const example = () => {
   const ids = ['id1', 'id2', 'id3'];
 
-  const [refs, rects] = useMultipleRects(ids);
+  const [refs, rects] = useMultipleRects({ ids });
 
   return (
     <>
