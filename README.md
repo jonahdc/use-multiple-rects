@@ -2,6 +2,8 @@
 
 A React hook that retrieves the window position and dimensions of multiple elements by unique IDs.
 
+![useMultipleRects](useMultipleRects.gif)
+
 ## Usage
 
 ```javascript
