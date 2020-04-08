@@ -2,7 +2,7 @@
 
 A React hook that retrieves the window position and dimensions of multiple elements by unique IDs.
 
-![useMultipleRects](useMultipleRects.gif)
+Demo: https://use-multiple-rects.now.sh/
 
 ## Usage
 
