@@ -4,6 +4,18 @@ A React hook that retrieves the window position and dimensions of multiple eleme
 
 Demo: https://use-multiple-rects.now.sh/
 
+## Install
+
+```
+npm install --save use-multiple-rects
+```
+
+or
+
+```
+yarn add use-multiple-rects
+```
+
 ## Usage
 
 ```javascript
