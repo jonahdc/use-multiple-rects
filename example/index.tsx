@@ -58,8 +58,13 @@ const App = () => {
               <div
                 key={id}
                 ref={refs[id]}
-                className="border-radius-3 bg-gray-200 flex-grow mr-10 mb-10 p-5 text-sm"
+                className="border-radius-3 bg-gray-200 flex-grow mr-10 mb-10 p-5 text-sm w-64"
               >
+                <div>
+                  <div className="text-xs bg-gray-400 p-1 inline-block rounded">
+                    {id}
+                  </div>
+                </div>
                 <div>x: {x}</div>
                 <div>y: {y}</div>
                 <div>width: {width}</div>
