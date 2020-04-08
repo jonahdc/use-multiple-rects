@@ -15,7 +15,11 @@ interface IIdRectMapObject {
   [id: string]: DOMRect;
 }
 
-export function useMultipleRects({ ids = [] }: { ids: string[] }) {
+export function useMultipleRects({
+  ids = [],
+}: {
+  ids: string[];
+}): [IIdRefMapObject, IIdRectMapObject] {
   const [refs, setRefs] = useState<IIdRefMapObject>({});
   const [rects, setRects] = useState<IIdRectMapObject>({});
 
