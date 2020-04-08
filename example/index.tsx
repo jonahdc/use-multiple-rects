@@ -28,10 +28,16 @@ const App = () => {
           </a>
         </h1>
         <div className="">
-          This demonstrates how{' '}
-          <span className="font-mono">useMultipleRects</span> lets you track the
-          window position and dimensions of multiple elements given a set of
-          unique IDs.
+          <p>
+            This demonstrates how{' '}
+            <span className="font-mono">useMultipleRects</span> lets you track
+            the window position and dimensions of multiple elements given a set
+            of unique IDs.
+          </p>
+          <p className="border-l-2 text-gray-700 border-indigo-200 bg-indigo-100 p-3 mt-4">
+            Add/remove elements and resize the window or scroll to see the
+            values get updated.
+          </p>
         </div>
       </div>
       <div>
