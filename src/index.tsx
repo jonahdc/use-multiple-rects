@@ -15,6 +15,8 @@ interface IIdRectMapObject {
   [id: string]: DOMRect;
 }
 
+const WINDOW_EVENTS = ['mousewheel', 'resize', 'scroll'];
+
 export function useMultipleRects({
   ids = [],
 }: {
@@ -52,16 +54,26 @@ export function useMultipleRects({
     hash(Object.keys(refs).map(key => `${refs[key]}-${!!refs[key].current}`)),
   ]);
 
+  const addWindowEventsListener = (types: string[], listener: any) => {
+    types.forEach(type => {
+      window.addEventListener(type, listener);
+    });
+  };
+
+  const removeWindowEventsListener = (types: string[], listener: any) => {
+    types.forEach(type => {
+      window.removeEventListener(type, listener);
+    });
+  };
+
   useLayoutEffect(() => {
     updateRefs();
     updateRects();
 
-    window.addEventListener('resize', updateRects);
-    window.addEventListener('scroll', updateRects);
+    addWindowEventsListener(WINDOW_EVENTS, updateRects);
 
     return () => {
-      window.removeEventListener('resize', updateRects);
-      window.removeEventListener('scroll', updateRects);
+      removeWindowEventsListener(WINDOW_EVENTS, updateRects);
     };
   }, [updateRefs, updateRects]);
 
