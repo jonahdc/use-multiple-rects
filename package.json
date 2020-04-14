@@ -50,5 +50,9 @@
   },
   "dependencies": {
     "object-hash": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonahdc/use-multiple-rects"
   }
 }
